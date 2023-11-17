@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 public abstract class ElevatorSubsystem extends SubsystemBase {
     
     /** set the reference for the PID/motion profile controlling elevator motors */
-    public abstract void moveElevator();
+    public abstract void moveElevator(double setpoint);
 
     /** if using custom PID, calculate and set the control effort here */
     public abstract void applyControlEffort(double current, double setpoint);
@@ -18,5 +18,5 @@ public abstract class ElevatorSubsystem extends SubsystemBase {
 
     public abstract void setElevatorSetpoint(double setpoint);
 
-    public abstract void getElevatorSetpoint();
+    public abstract double getElevatorSetpoint();
 }
